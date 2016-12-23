@@ -36,7 +36,7 @@ class ConfigProvider
      *
      * @return array
      */
-    public function getDependencies(): array
+    public function getDependencies()
     {
         return [
             'dependencies' => [
@@ -54,7 +54,7 @@ class ConfigProvider
      *
      * @return array
      */
-    public function __invoke(): array
+    public function __invoke()
     {
         return $this->getDependencies();
     }
