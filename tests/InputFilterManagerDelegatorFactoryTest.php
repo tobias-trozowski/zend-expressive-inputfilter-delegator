@@ -27,7 +27,7 @@ namespace TobiasTest\Expressive\InputFilter;
 use Interop\Container\ContainerInterface;
 use Tobias\Expressive\InputFilter\InputFilterManagerDelegatorFactory;
 use Zend\InputFilter\InputFilterPluginManager;
-use Zend\ServiceManager\Factory\DelegatorFactoryInterface;
+use Zend\ServiceManager\DelegatorFactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
@@ -63,19 +63,22 @@ class InputFilterManagerDelegatorFactoryTest extends \PHPUnit_Framework_TestCase
         $container->expects($this->once())->method('get')->with('config')->will($this->returnValue($config));
 
         $inputFilterPluginManager = $this->getMockBuilder(InputFilterPluginManager::class)->disableOriginalConstructor()->getMock();
-        $inputFilterPluginManager->expects($this->once())->method('configure')->with(
-            [
-                'abstract_factories' => [],
-                'aliases'            => [],
-                'delegators'         => [],
-                'factories'          => [],
-                'initializers'       => [],
-                'invokables'         => [],
-                'lazy_services'      => [],
-                'services'           => [],
-                'shared'             => [],
-            ]
-        );
+        if (method_exists(InputFilterPluginManager::class, 'configure')) {
+            $inputFilterPluginManager->expects($this->once())->method('configure')->with(
+                [
+                    'abstract_factories' => [],
+                    'aliases'            => [],
+                    'delegators'         => [],
+                    'factories'          => [],
+                    'initializers'       => [],
+                    'invokables'         => [],
+                    'lazy_services'      => [],
+                    'services'           => [],
+                    'shared'             => [],
+                ]
+            );
+        }
+
 
         $callback = function () use ($inputFilterPluginManager) {
             return $inputFilterPluginManager;
