@@ -1,10 +1,12 @@
 # zend-expressive-inputfilter-delegator
 
+[![License](https://poser.pugx.org/tobias/zend-expressive-inputfilter-delegator/license)](https://packagist.org/packages/tobias/zend-expressive-inputfilter-delegator)
 [![Latest Stable Version](https://poser.pugx.org/tobias/zend-expressive-inputfilter-delegator/v/stable)](https://packagist.org/packages/tobias/zend-expressive-inputfilter-delegator)
-[![Total Downloads](https://poser.pugx.org/tobias/zend-expressive-inputfilter-delegator/downloads)](https://packagist.org/packages/tobias/zend-expressive-inputfilter-delegator)
+[![PHP 7 ready](http://php7ready.timesplinter.ch/tobias-trozowski/zend-expressive-inputfilter-delegator/badge.svg)](https://travis-ci.org/tobias-trozowski/zend-expressive-inputfilter-delegator)
 [![Build Status](https://travis-ci.org/tobias-trozowski/zend-expressive-inputfilter-delegator.svg?branch=master)](https://travis-ci.org/tobias-trozowski/zend-expressive-inputfilter-delegator)
 [![Coverage Status](https://coveralls.io/repos/tobias-trozowski/zend-expressive-inputfilter-delegator/badge.svg?branch=master)](https://coveralls.io/r/tobias-trozowski/zend-expressive-inputfilter-delegator?branch=master)
-[![License](https://poser.pugx.org/tobias/zend-expressive-inputfilter-delegator/license)](https://packagist.org/packages/tobias/zend-expressive-inputfilter-delegator)
+[![Total Downloads](https://poser.pugx.org/tobias/zend-expressive-inputfilter-delegator/downloads)](https://packagist.org/packages/tobias/zend-expressive-inputfilter-delegator)
+
 
 Delegator for Zend [InputFilterPluginManager](https://github.com/zendframework/zend-inputfilter)
 
